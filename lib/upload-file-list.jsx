@@ -1,6 +1,16 @@
-"use strict";
+'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8,9 +18,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = require('react');
-
-var UploadFileList = (function (_React$Component) {
+var UploadFileList = function (_React$Component) {
     _inherits(UploadFileList, _React$Component);
 
     function UploadFileList() {
@@ -51,26 +59,27 @@ var UploadFileList = (function (_React$Component) {
                     width: 40,
                     height: 40
                 };
-                return React.createElement(
+                return _react2.default.createElement(
                     'div',
-                    { key: info.name, style: picItemStyle },
-                    React.createElement(
+                    { key: info.name,
+                        style: picItemStyle },
+                    _react2.default.createElement(
                         'div',
                         { style: closeBtnStyle },
                         'x'
                     ),
-                    React.createElement(
+                    _react2.default.createElement(
                         'div',
                         { style: { display: 'table' } },
-                        React.createElement(
+                        _react2.default.createElement(
                             'div',
                             { style: {
                                     display: 'table-cell',
                                     border: '1px solid #edf1f2'
                                 } },
-                            React.createElement('div', { style: picItemImageStyle })
+                            _react2.default.createElement('div', { style: picItemImageStyle })
                         ),
-                        React.createElement(
+                        _react2.default.createElement(
                             'div',
                             { style: {
                                     display: 'table-cell',
@@ -92,10 +101,11 @@ var UploadFileList = (function (_React$Component) {
                 borderRadius: 50,
                 margin: '10px 5px'
             };
-            return React.createElement(
+            return _react2.default.createElement(
                 'div',
-                { style: textItemStyle, key: info.name },
-                React.createElement(
+                { style: textItemStyle,
+                    key: info.name },
+                _react2.default.createElement(
                     'div',
                     { style: closeBtnStyle },
                     'x'
@@ -108,7 +118,7 @@ var UploadFileList = (function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            return React.createElement(
+            return _react2.default.createElement(
                 'div',
                 null,
                 this.props.list.map(function (info) {
@@ -119,10 +129,10 @@ var UploadFileList = (function (_React$Component) {
     }]);
 
     return UploadFileList;
-})(React.Component);
+}(_react2.default.Component);
 
 UploadFileList.defaultProps = {
     type: 'text'
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
 exports.default = UploadFileList;
